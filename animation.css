@@ -1,0 +1,61 @@
+/*
+@keyframes					Specifies the animation code
+animation					A shorthand property for setting all the animation properties
+animation-delay				Specifies a delay for the start of an animation
+animation-direction 		Specifies whether an animation should be played forwards, backwards or in alternate cycles
+animation-duration 			Specifies how long time an animation should take to complete one cycle
+animation-fill-mode 		Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
+animation-iteration-count 	Specifies the number of times an animation should be played
+animation-name 				Specifies the name of the @keyframes animation
+animation-play-state 		Specifies whether the animation is running or paused
+animation-timing-function 	Specifies the speed curve of the animation
+
+
+@keyframes animationname {keyframes-selector (0-100)/(from-to) {css-styles;}}
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: #7037d5;}
+  25%  {top: 0px; left: 200px; background: #40ff8c;}
+  50%  {top: 200px; left: 200px; background: #ffcd40;}
+  75%  {top: 200px; left: 0px; background: #ff4082;}
+  100% {top: 0px; left: 0px; background: #40e5ff;}
+}
+
+animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+animation-name: animationname;
+animation-duration: xxxms; ys;
+animation-timing-function: linear; ease; ease-in; ease-out; ease-in-out; cubic-bezier(x1,y1,x2,y2);
+animation-delay: xxxms; ys;
+animation-iteration-count: n; infinite;
+animation-direction: normal; reverse; alternate; alternate-reverse;
+animation-fill-mode: none; forwards; backwards; both;
+animation-play-state: paused; running;
+
+https://www.w3schools.com/css/css3_animations.asp
+*/
+
+
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: #7037d5;}
+  25%  {top: 0px; left: 200px; background: #40ff8c;}
+  50%  {top: 200px; left: 200px; background: #ffcd40;}
+  75%  {top: 200px; left: 0px; background: #ff4082;}
+  100% {top: 0px; left: 0px; background: #40e5ff;}
+}
+
+.box {
+	margin: 50px;
+	width:200px;
+	height: 200px;
+	background: #ff4082;
+	position: relative;
+}
+
+.custom-anim {
+	animation-name: mymove;
+	animation-duration: 3000ms;
+	animation-timing-function: ease-in-out; 
+	animation-delay: 1200ms;
+	animation-iteration-count: 2;
+	animation-direction: normal;
+	animation-fill-mode: none;
+}
